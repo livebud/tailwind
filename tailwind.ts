@@ -16,5 +16,7 @@ export function process(config: Config): Promise<string> {
     @tailwind utilities;
   `, {
     from: undefined,
-  }).then(result => result.css)
+  }).then(result => {
+    return result.css
+  })
 }

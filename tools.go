@@ -1,7 +1,7 @@
 //go:build tools
 // +build tools
 
-package svelte2go
+package tailwind
 
 import (
 	_ "github.com/evanw/esbuild/cmd/esbuild"
