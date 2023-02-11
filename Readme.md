@@ -32,7 +32,7 @@ func main() {
 	css, _ := processor.Process(ctx, "index.html", `
 	  <html>
 	    <head>
-	      <link rel="stylesheet" href="build.css" />
+	      <link rel="stylesheet" href="index.min.css" />
 	    </head>
 	    <body>
 	      <h1 class="bg-[url(/img/grid.svg)] text-sky-500 hover:text-sky-600">Hello Tailwind!</h1>
@@ -50,7 +50,11 @@ This results in a CSS file:
 /* ... */
 ```
 
-For production, I recommend building this CSS file and embedding it alongside the processed HTML file. For development, you may want to run this processor dynamically. Keep in mind that this processor currently depends on CGO. I built this project for [Bud](https://github.com/livebud/bud) which will handle this for you.
+For production, I recommend building this CSS file and embedding it alongside the processed HTML file. 
+
+For development, you may want to run this processor dynamically. Keep in mind that this processor currently depends on CGO. 
+
+I originally built this project for [Bud](https://github.com/livebud/bud), which handles the environment differences for you.
 
 ## CLI Usage
 
